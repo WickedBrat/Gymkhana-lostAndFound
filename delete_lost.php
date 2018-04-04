@@ -25,6 +25,9 @@
 
 			if($username === $userid){
 
+				
+			#have to ADD LDAP authorization CODE here afterwards. delete from DB only when present in LDAP directory and 
+			#userid is equal to username in LDAP	
 	  					$connection = mysqli_connect("localhost","root","","lost and found");
 						$delete_query = "DELETE FROM lost_objects WHERE id='$var';";
 						mysqli_query($connection,$delete_query);
