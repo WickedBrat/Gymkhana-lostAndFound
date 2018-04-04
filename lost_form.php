@@ -28,7 +28,9 @@
 				}
 				if (!empty($username) and !empty($password) and !empty($subject) and !empty($details)){
 
-							$query  = "INSERT INTO lost_objects SET
+#+++++++++++++++++++++++++++++have to ADD LDAP authorization CODE here afterwards. delete from DB only when present in LDAP directory
+					
+					$query  = "INSERT INTO lost_objects SET
 									id='',
 									userid='$username',
 									password='$password',
