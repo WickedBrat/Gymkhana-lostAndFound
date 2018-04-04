@@ -26,6 +26,9 @@
 			}
 			if (!empty($username) and !empty($password) and !empty($subject) and !empty($details)){
 
+						
+			#have to ADD LDAP authorization CODE here afterwards.Add to DB only when present in LDAP directory
+				
 						$connection = mysqli_connect("localhost","root","","lost and found");
 						$query  = "INSERT INTO found_objects SET
 								id='',
