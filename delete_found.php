@@ -21,6 +21,8 @@
 		}
 		if (!empty($username) and !empty($password)){
 
+			#have to ADD LDAP authorization CODE here afterwards. entry in DB only when present in LDAP directory. 
+			
 			if($username === $userid){
 
 	  				$connection = mysqli_connect("localhost","root","","lost and found");
