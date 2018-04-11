@@ -1,61 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
+<head>
 
-  <head>
+  <meta charset="utf-8">
+  <title>Lost and Found Portal | IIIT Allahabad</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!--Style-->
 
-    <title>IIIT Allahabad | Lost and found</title>
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-responsive.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <style>
+  .nav li {
+    display: inline;
+    padding-right: 20px;
+    font-size: 20px;
+  }
+  </style>
+</head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<body>
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<!--Preloader-->
 
-    <!-- Custom styles for this template -->
-    <link href="css/coming-soon.min.css" rel="stylesheet">
-
-<style>
-    .object{
-        position: absolute;
-        right: 50px;
-        top: 100px;
-    }
-    li {
-        font-size: 20px;
-        padding-right: 20px;
-    }
-    .form {
-        padding-top: 30px;
-    }
-
-</style>
-
-  </head>
-
-  <body style="color: white;">
-
-    <div class="overlay"></div>
-
-    <div class="masthead">
-      <div class="masthead-bg"></div>
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-12 my-auto">
-            <div class="masthead-content text-white py-5 py-md-0">
-              <h1 class="mb-3">Lost & Found</h1>
-              <p class="mb-5"><b>Indian Institute of Information Technology <br> Allahabad</b></p>
-            </div>
-          </div>
-        </div>
+<div class="preloader" id="preloader">
+    <div class="item">
+      <div class="spinner">
       </div>
     </div>
+</div>
 
-<div class="object">
+  <!--Header-->
+  <header id="fullscreen">
+    
+      <div class="logo" id="full" style="display:none;"><a class="ajax-link" href="index.html">Lost and Found</a></div>
+      
+        <div class="menu-index" style="display:none;" id="button">
+        <i class="fa fa-bars"></i>
+        </div>
 
+  </header>
+
+
+<!--Header-->
+<header class="boxed" id="header-white">
+
+  <div class="header-margin">
+  
+    <div class="logo"><a class="ajax-link" href="/">IIIT Allahabad</a></div>
+    
+    <!-- <ul class="social-icon">
+      <div class="social-index">
+      <li><a href="https://www.facebook.com/thomsooncom"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://www.behance.net/TomaszMazurczak"><i class="fa fa-behance"></i></a></li>
+      </div>
+    </ul> -->
+    
+  </div>
+
+</header>
+
+<div class="clear"></div>
+
+<!--Content-->
+
+<div class="content" id="ajax-content">
+
+
+      <div class="text-intro" id="site-type">
+
+        <h1>Lost and Found</h1>
