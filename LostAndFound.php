@@ -2,7 +2,7 @@
 
 	include("header.php");
 	include("panel-home.php");
-	$connection = mysqli_connect("localhost","root","","lost and found");
+	$connection = mysqli_connect("127.0.0.1","root","","lostAndFound");
 	$select_query_lost = "SELECT * FROM lost_objects ORDER BY id DESC";
 	$result_lost = mysqli_query($connection,$select_query_lost);
 	#$results_lost = array();
