@@ -1,5 +1,4 @@
 <?php
-
 	include("header.php");
 	include("panel-lost.php");
 	session_start();

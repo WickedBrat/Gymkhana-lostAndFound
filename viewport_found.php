@@ -1,5 +1,4 @@
 <?php
-
 	include("header.php");
 	include("panel-found.php");
 	session_start();

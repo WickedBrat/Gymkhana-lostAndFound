@@ -1,5 +1,11 @@
 <?php
-
+    session_start();
+	// If user is not authorised redirect to login page
+	if(!isset($_SESSION['access_token'])) {
+		header('Location: login.php');
+		exit();
+	}
+	
 	include("header.php");
 	include("panel-home.php");
 	$connection = mysqli_connect("127.0.0.1","root","","lostAndFound");
