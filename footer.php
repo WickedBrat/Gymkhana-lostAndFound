@@ -29,7 +29,6 @@
 
 <!--Footer-->
 
-<footer id="footer-box">
 
   <div class="footer-margin">
    
@@ -37,8 +36,6 @@
   
   </div>
 
-
-</footer>
 
 
 <!--Scripts-->

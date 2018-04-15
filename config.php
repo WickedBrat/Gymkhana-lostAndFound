@@ -4,10 +4,10 @@
 
     require_once "libraries/GoogleAPI/vendor/autoload.php";
     $gClient = new Google_Client();
-    $gClient->setClientId("323065339705-aqf7bnv02k2gofaa2tttn9lpq0qi12u9.apps.googleusercontent.com");
-    $gClient->setClientSecret("42Dkuxw2mncmAnjPERCuaD5v");
+    $gClient->setClientId("344830946543-3ubtooodmsmqs64kg0a2mln1p1lsqp1n.apps.googleusercontent.com");
+    $gClient->setClientSecret("ACvY7zfvNRarncbDn-vUHsG3");
     $gClient->setApplicationName("Lost and Found");
-    $gClient->setRedirectUri("http://localhost/callback.php");
+    $gClient->setRedirectUri("https://gymkhana.iiita.ac.in/lost-and-found/callback.php");
     $gClient->setScopes(array("https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/userinfo.email"));
 
 ?>

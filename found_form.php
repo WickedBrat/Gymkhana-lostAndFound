@@ -8,24 +8,27 @@
     $error ='';
 
 		 if (isset($_REQUEST['submit'])){
-			$username =$user->name;
-			$username = strtolower($username);
+			$username =$_SESSION['useremail'];
 			$subject = $_REQUEST['subject'];
 			$details = $_REQUEST['details'];
 
-			if (empty($username)){
-				$error .= 'please enter username<br/>';
-			}
+			echo $username;
+			echo $subject;
+			echo $details;
+			// if (empty($username)){
+			// 	$error .= 'please enter username<br/>';
+			// }
 			if (empty($subject)){
 				$error .= 'please enter subject<br/>';
 			}
 			if (empty($details)){
 				$error .= 'please enter details';
 			}
-			if (!empty($username) and !empty($subject) and !empty($details)){
 
-						$connection = mysqli_connect("127.0.0.1","root","","lostAndFound");
-						$query  = "INSERT INTO found_objects SET
+			if (!empty($subject) and !empty($details)){
+
+				$connection = mysqli_connect("localhost","gymkhanadba","gymwimpass123","gymkhana");
+				$query  = "INSERT INTO found_objects SET
 								id='',
 								userid='$username',
 								subject='$subject',
@@ -33,7 +36,7 @@
 								time=NOW()";
 
 						mysqli_query($connection , $query);
-						header( "refresh:1;url=success.php" );	
+						header( "refresh:1;url=index.php" );	
 			}
 					
 		}
@@ -42,21 +45,19 @@
     include("header.php");
 	include("panel-found.php");
 ?>
-<center style="color: white;">
+<center style="max-width:55%;">
 	<div class="row box form" >
 	<form action="" method="POST">
 	<fieldset>
-		<legend style="color: white;">Enter Details</legend>
+		<legend>Enter Details</legend>
 		<table>	
       <tr class="row">
-				<td align="center">Subject</td>
-				<td>:</td>
+				<td align="center">Subject :</td>
     
 			</tr>
 				<td><input type="text" name="subject" style="width:400px" /></td>
       <tr class="row">
-				<td align="center">Enter Object Details</td>
-				<td>:</td>
+				<td align="center">Enter Object Details :</td>
 			</tr>
 				<td>
                     <textarea type="text" name="details" style="height: 100px; width: 400px; padding-top: 0px;"></textarea>

@@ -1,29 +1,28 @@
 <?php
 	session_start();
-	// If user is not authorised redirect to login page
+// If user is not authorised redirect to login page
 	if(!isset($_SESSION['access_token'])) {
 		header('Location: login.php');
 		exit();
 	}
-    $connection = mysqli_connect("127.0.0.1","root","","lostAndFound");
+	$connection = mysqli_connect("localhost","gymkhanadba","gymwimpass123","gymkhana");
     $error ='';
 	if (isset($_REQUEST['submit'])){
-		$username =$_SESSION['username']->name;
-		$username = strtolower($username);
+		$username = $_SESSION['useremail'];
 		$subject = $_REQUEST['subject'];
 		$details = $_REQUEST['details'];
 
 
-		if (empty($username)){
-			$error .= 'please enter username<br/>';
-		}
+		// if (empty($username)){
+		// 	$error .= 'please enter username<br/>';
+		// }
 		if (empty($subject)){
 			$error .= 'please enter subject<br/>';
 		}
 		if (empty($details)){
 			$error .= 'please enter details';
 		}
-		if (!empty($username) and !empty($subject) and !empty($details)){
+		if (!empty($subject) and !empty($details)){
 
 			$query  = "INSERT INTO lost_objects SET
 			id='',
@@ -33,7 +32,7 @@
 			time=NOW()";
 
 			mysqli_query($connection , $query);
-			header( "refresh:1;url=success.php" );						
+			header( "refresh:1;url=index.php" );						
 		}
 	}
 
@@ -42,21 +41,19 @@
     include("header.php");
 	include("panel-lost.php");
 ?>	
-<center style="color: white;">
+<center style="max-width:55%;">
 	<div class="row box form" >
 	<form action="" method="POST">
 	<fieldset>
-		<legend style="color: white;">Enter Details</legend>
+		<legend>Enter Details</legend>
 		<table>	
       <tr class="row">
-				<td align="center">Subject</td>
-				<td>:</td>
+				<td align="center">Subject :</td>
     
 			</tr>
 				<td><input type="text" name="subject" style="width:400px" /></td>
       <tr class="row">
-				<td align="center">Enter Object Details</td>
-				<td>:</td>
+				<td align="center">Enter Object Details :</td>
 			</tr>
 				<td>
                     <textarea type="text" name="details" style="height: 100px; width: 400px; padding-top: 0px;"></textarea>

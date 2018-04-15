@@ -8,7 +8,7 @@
   	$error = '';
   	$userid = $_SESSION['userid'];
 
-  	$connection = mysqli_connect("localhost","root","","lost and found");
+	  $connection = mysqli_connect("localhost","gymkhanadba","gymwimpass123","gymkhana");
 
   	 if (isset($_REQUEST['submit'])){
 	    	$username =$_REQUEST['username'];
@@ -28,7 +28,7 @@
 				
 			#have to ADD LDAP authorization CODE here afterwards. delete from DB only when present in LDAP directory and 
 			#userid is equal to username in LDAP	
-	  					$connection = mysqli_connect("localhost","root","","lost and found");
+	  					$connection = mysqli_connect("localhost","gymkhanadba","gymwimpass123","gymkhana");
 						$delete_query = "DELETE FROM lost_objects WHERE id='$var';";
 						mysqli_query($connection,$delete_query);
 						header("Location:success.php");
